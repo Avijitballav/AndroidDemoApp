@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroung" >
+            <TextView
+                android:id="@+id/tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_below="@+id/iv_Back"
+                android:text="@string/ContactusforSupport"
+                android:fontFamily="@font/app_font_poppins_semibold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_header"
+                android:layout_above="@+id/tv_Apply"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:scrollbars="none"
+                android:paddingTop="@dimen/_20sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:background="@drawable/ic_bg_text_help_support">
+
+                        <TextView
+                            android:id="@+id/tv_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="@string/SuporttalkiBooki"
+                            android:drawableStart="@drawable/ic_mail_help_support"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/app_font_poppins_semibold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16sdp"/>
+
+                        <TextView
+                            android:id="@+id/tv_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/ph_033123456789"
+                            android:drawableStart="@drawable/ic_contact_help_support"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:fontFamily="@font/app_font_poppins_semibold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16sdp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/ic_bg_text_submit_query">
+
+                        <EditText
+                            android:id="@+id/tv_useremail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:hint="@string/Email"
+                            android:paddingBottom="@dimen/_5sdp"
+                             android:drawablePadding="@dimen/_5sdp"
+                            android:background="@drawable/helpuser_background"
+                            android:fontFamily="@font/app_font_poppins_regular"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            />
+
+
+
+
+                        <EditText
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:hint="@string/Name"
+                            android:paddingBottom="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:background="@drawable/helpuser_background"
+                            android:fontFamily="@font/app_font_poppins_regular"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"/>
+
+                        <EditText
+                            android:id="@+id/tv_Mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:hint="@string/Mobile"
+                            android:inputType="phone"
+                            android:maxLength="14"
+                            android:paddingBottom="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:background="@drawable/helpuser_background"
+                            android:fontFamily="@font/app_font_poppins_regular"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"/>
+
+
+                        <EditText
+                            android:id="@+id/tv_Type_your_message_here"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:gravity="left"
+                            android:maxLines="5"
+                            android:hint="@string/Type_your_message_here"
+                            android:paddingBottom="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:background="@drawable/helpuser_background"
+                            android:fontFamily="@font/app_font_poppins_regular"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+            <TextView
+                android:id="@+id/tv_Apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Submit"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/rl_bottomview"
+                android:gravity="center"
+                android:textSize="@dimen/_16sdp"
+                android:background="@drawable/btn_next_choose_language"/>
+            <RelativeLayout
+                android:id="@+id/rl_bottomview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+                <LinearLayout
+                    android:id="@+id/ll_bottomview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/ic_bg_menu_home"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/tv_bottomHome"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_home_dselect"
+                        android:text="@string/Home"
+                        android:textSize="@dimen/_10sdp"
+                        android:drawablePadding="@dimen/_2sdp"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/tv_bottomHelp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_help_support_select"
+                        android:text="@string/helpandSupport"
+                        android:textSize="@dimen/_10sdp"
+                        android:drawablePadding="@dimen/_2sdp"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/tv_bottomNotification"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_notification_dselect"
+                        android:text="@string/Notifications"
+                        android:textSize="@dimen/_10sdp"
+                        android:drawablePadding="@dimen/_2sdp"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/tv_bottomAccount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_my_account_dselect"
+                        android:text="@string/MyAccount"
+                        android:textSize="@dimen/_10sdp"
+                        android:drawablePadding="@dimen/_2sdp"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_thankyou"
+            android:background="@color/app_theme"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_thank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_20sdp">
+                <TextView
+                    android:id="@+id/tv_thank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="@string/ThankYou"
+                    android:fontFamily="@font/app_font_poppins_semibold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_30sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_thankdes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/Wewillcontactyousoon"
+                    android:fontFamily="@font/app_font_poppins_semibold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_ExploreAudioBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ExploreAudioBook"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:layout_below="@+id/ll_thank"
+                android:textColor="@color/app_theme"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="@dimen/_16sdp"
+                android:background="@drawable/ic_bg_choose_language"/>
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/pbloader"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/app_theme"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+</layout>

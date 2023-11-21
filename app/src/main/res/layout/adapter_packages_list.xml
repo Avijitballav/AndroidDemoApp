@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/subscription_payment"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_3sdp">
+
+        <RelativeLayout
+            android:id="@+id/rl_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_theme"
+            android:padding="@dimen/_2sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/subscription_payment"
+                android:padding="@dimen/_5sdp">
+
+
+                <TextView
+                    android:id="@+id/tv_yearlyamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INR 250"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp" />
+                <TextView
+                    android:id="@+id/tv_taxes"
+                    android:layout_toEndOf="@+id/tv_yearlyamount"
+                    android:layout_toStartOf="@+id/tv_yearly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:text=" inclusive taxes"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tv_yearly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yearly"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp" />
+                <TextView
+                    android:id="@+id/tv_activestatus"
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_below="@+id/tv_yearlyamount"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/ic_tick_subscription"/>
+                <TextView
+                    android:id="@+id/tv_yearlyalrt"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_below="@+id/tv_yearlyamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tv_activestatus"
+                    android:text="Listing our amazing collection @less ₹1/day"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

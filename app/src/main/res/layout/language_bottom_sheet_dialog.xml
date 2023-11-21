@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_bg_text_choose_language"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_alignParentBottom="true">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_15sdp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ChooseLanguage"
+                    android:fontFamily="@font/app_font_poppins_semibold"
+                    android:layout_toLeftOf="@+id/iv_share"
+                    android:textColor="@color/devy_grey"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/_20sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/listen_your_favourite_book_in_the_language_you_like"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/app_font_poppins_semibold"
+                    android:layout_toLeftOf="@+id/iv_share"
+                    android:textColor="@color/devy_grey"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_languageview"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+              <!--  <TextView
+                    android:id="@+id/tv_english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:drawableEnd="@drawable/ic_choose_language_selct"
+                    android:text="@string/English"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/devy_grey"
+                    android:fontFamily="@font/app_font_poppins_semibold"
+                    android:background="@drawable/ic_bg_choose_language"/>
+
+                <TextView
+                    android:id="@+id/tv_Bengali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:drawableEnd="@drawable/ic_choose_language_dselct"
+                    android:text="@string/Bengali"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/devy_grey"
+                    android:fontFamily="@font/app_font_poppins_semibold"
+                    android:background="@drawable/ic_bg_choose_language"/>
+
+                <TextView
+                    android:id="@+id/tv_Gujrati"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:drawableEnd="@drawable/ic_choose_language_dselct"
+                    android:text="@string/Gujrati"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/devy_grey"
+                    android:fontFamily="@font/app_font_poppins_semibold"
+                    android:background="@drawable/ic_bg_choose_language"/>
+
+                <TextView
+                    android:id="@+id/tv_Telugu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:drawableEnd="@drawable/ic_choose_language_dselct"
+                    android:text="@string/Telugu"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/devy_grey"
+                    android:fontFamily="@font/app_font_poppins_semibold"
+                    android:background="@drawable/ic_bg_choose_language"/>
+
+                <TextView
+                    android:id="@+id/tv_Malayalam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:drawableEnd="@drawable/ic_choose_language_dselct"
+                    android:text="@string/Malayalam"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/devy_grey"
+                    android:fontFamily="@font/app_font_poppins_semibold"
+                    android:background="@drawable/ic_bg_choose_language"/>-->
+
+                <TextView
+                    android:id="@+id/tv_Next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Next"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_16sdp"
+                    android:background="@drawable/btn_next_choose_language"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</layout>

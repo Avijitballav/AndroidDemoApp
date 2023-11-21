@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/ic_bg_text_notification">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubjectHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Audio Book"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_logo_notification"
+            android:textColor="@color/colorDeepBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubjectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sun, 11:30Am"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorDeepBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/iv_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_image_notification"
+            android:layout_below="@+id/tvSubjectHeading"
+            app:siRadius="10dp"
+            app:siBorderWidth="1dp"
+            app:siBorderColor="@color/white"
+            android:visibility="invisible"
+            app:siSquare="true" />
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/iv_notificationimage"
+            android:layout_alignLeft="@+id/iv_demo"
+            android:layout_alignRight="@+id/iv_demo"
+            android:layout_alignTop="@+id/iv_demo"
+            android:layout_alignBottom="@+id/iv_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_image_notification"
+            android:layout_below="@+id/tvSubjectHeading"
+            app:siRadius="10dp"
+            app:siBorderWidth="1dp"
+            app:siBorderColor="@color/white"
+            app:siSquare="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/iv_demo"
+            android:layout_below="@+id/tvSubjectHeading"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSubjectTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Thriller"
+                android:textColor="@color/colorDeepBlack"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSubjectdes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/listen_your_favourite_book_in_the_language_you_like"
+                android:maxLines="3"
+                android:textColor="@color/devy_grey"
+                android:textSize="@dimen/_12ssp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

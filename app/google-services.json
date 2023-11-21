@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "783802375957",
+    "project_id": "talkibooki-331007",
+    "storage_bucket": "talkibooki-331007.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783802375957:android:2661173743749cd38a531c",
+        "android_client_info": {
+          "package_name": "com.talki.booki.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783802375957-4ojpgna8hu9cikhodrb1unqugda3c8si.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talki.booki.app",
+            "certificate_hash": "7d86efec9637e8f4051a0af477927a25b552c238"
+          }
+        },
+        {
+          "client_id": "783802375957-a4jinhiknlvrpm9uglf1l0l3atbjrvh3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talki.booki.app",
+            "certificate_hash": "f6499c2a00b1e9a868c9d3239897ddad2c2766d5"
+          }
+        },
+        {
+          "client_id": "783802375957-jo35ipvflttatgcn6c8pj1e3qpdi94bm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talki.booki.app",
+            "certificate_hash": "35d5293bcd3fe1314ce55e54c675970ff46913de"
+          }
+        },
+        {
+          "client_id": "783802375957-78bcafolcbt4vts40vaart7nffrb5f4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjzFcOP_txZ41BOK3WFs3MhKQ1MW78H6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783802375957-78bcafolcbt4vts40vaart7nffrb5f4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

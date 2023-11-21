@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg_signin">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_logo_signin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/app_font_poppins_semibold"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/black"
+                android:text="@string/SignInWith"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/iv_googlelogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_google_signin"/>
+
+                <ImageView
+                    android:id="@+id/iv_facebooklogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/btn_fb_signin"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnsubmit"
+                android:layout_marginTop="10dp">
+                <CheckBox
+                    android:id="@+id/ch_pp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_pp"
+                    android:layout_toEndOf="@+id/ch_pp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:paddingTop="10dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:paddingBottom="10dp"
+                    android:text="@string/Please_accept_privacy_policy"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pbloader"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/app_theme"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+</layout>

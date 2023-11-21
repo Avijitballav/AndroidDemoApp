@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:background="@drawable/splash"
+        tools:context="com.talki.booki.app.ui.network.NetworkNotAvailable">
+
+
+
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20sdp">
+
+
+        <TextView
+                android:id="@+id/ivNeoCarsLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Network_not_availabl_refresh"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+
+
+        <TextView
+                android:id="@+id/tv_refresh"
+                android:layout_below="@+id/ivNeoCarsLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/app_theme"
+                android:text="@string/Refresh"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

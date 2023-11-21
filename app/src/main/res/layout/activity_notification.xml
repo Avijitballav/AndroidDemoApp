@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg_notification" >
+        <TextView
+            android:id="@+id/tv_notificationhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:text="@string/Notifications"
+            android:fontFamily="@font/app_font_poppins_semibold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCNotificationList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:scrollbars="none"
+            app:layoutManager="GridLayoutManager"
+            android:layout_above="@+id/rl_bottomview"
+            android:layout_below="@+id/tv_notificationhead" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottomview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:id="@+id/ll_bottomview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:background="@drawable/ic_bg_menu_home"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/tv_bottomHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_home_dselect"
+                    android:text="@string/Home"
+                    android:textSize="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_bottomHelp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_help_support_dselect"
+                    android:text="@string/helpandSupport"
+                    android:textSize="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_bottomNotification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_notification_select"
+                    android:text="@string/Notifications"
+                    android:textSize="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_bottomAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_my_account_dselect"
+                    android:text="@string/MyAccount"
+                    android:textSize="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pbloader"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/app_theme"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroung" >
+
+        <include layout="@layout/toolbar_home"
+            android:id="@+id/toolbarheader"/>
+
+        <ScrollView
+            android:id="@+id/sc_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbarheader"
+            android:layout_above="@+id/rl_bottomview">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_banner_demo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_header_home_one"
+                        android:visibility="invisible"/>
+                    <com.custom.sliderimage.logic.SliderImage
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/iv_banner_demo"
+                        android:layout_alignTop="@+id/iv_banner_demo"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:visibility="gone"/>
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/iv_banner_demo"
+                        android:layout_alignTop="@+id/iv_banner_demo"
+                        app:sliderAnimationDuration="1500"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="1000"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorSelectedColor="@color/devy_grey"
+                        app:sliderIndicatorUnselectedColor="@color/colorDimGrey"
+                        app:sliderScrollTimeInSec="3"
+                        app:sliderStartAutoCycle="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_motivation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_language"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbarheader"
+            android:layout_above="@+id/rl_bottomview"
+            android:visibility="gone">
+
+            <include layout="@layout/language_bottom_sheet_dialog"
+                android:id="@+id/include_language"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottomview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:id="@+id/ll_bottomview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:background="@drawable/ic_bg_menu_home"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/tv_bottomHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_home_select"
+                    android:text="@string/Home"
+                    android:textSize="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_bottomHelp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_help_support_dselect"
+                    android:text="@string/helpandSupport"
+                    android:textSize="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_bottomNotification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_notification_dselect"
+                    android:text="@string/Notifications"
+                    android:textSize="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_bottomAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_my_account_dselect"
+                    android:text="@string/MyAccount"
+                    android:textSize="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pbloader"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/app_theme"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</layout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroung" >
+
+        <include layout="@layout/toolbar_header"
+            android:id="@+id/toolbarHeaderContent"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbarHeaderContent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_banner_demo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:visibility="visible"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl_share">
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:fontFamily="@font/app_font_poppins_semibold"
+                        android:layout_toLeftOf="@+id/iv_share"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/_16sdp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/iv_share"
+                        android:background="@drawable/ic_share_audio_book_details"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_author"
+                        android:text="@string/Author"
+                        android:fontFamily="@font/app_font_poppins_regular"
+                        android:layout_below="@+id/rl_share"
+                        android:textColor="@color/devy_grey"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textSize="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:id="@+id/tv_authorname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:fontFamily="@font/app_font_poppins_semibold"
+                        android:layout_below="@+id/rl_share"
+                        android:maxLines="1"
+                        android:layout_toEndOf="@+id/tv_author"
+                        android:textColor="@color/devy_grey"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textSize="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_Narrator"
+                        android:text="@string/Narrator"
+                        android:fontFamily="@font/app_font_poppins_regular"
+                        android:layout_below="@+id/tv_author"
+                        android:textColor="@color/devy_grey"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:id="@+id/tv_Narratorname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:fontFamily="@font/app_font_poppins_semibold"
+                        android:layout_below="@+id/tv_author"
+                        android:maxLines="1"
+                        android:layout_toEndOf="@+id/tv_Narrator"
+                        android:textColor="@color/devy_grey"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="@dimen/_12sdp"/>
+
+                    <SeekBar
+                        android:id="@+id/seekbar_audio"
+                        android:layout_below="@+id/tv_Narrator"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_audiocurrent_time"
+                        android:layout_below="@+id/seekbar_audio"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/black"
+                        android:text="0:00"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_audiomax_time"
+                        android:layout_below="@+id/seekbar_audio"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_audiocurrent_time">
+                    <ImageView
+                        android:id="@+id/mPlayerControl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/btn_play_audio_book_details"/>
+
+                    <ImageView
+                        android:id="@+id/iv_previousaudio"
+                        android:layout_toStartOf="@+id/mPlayerControl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:src="@drawable/btn_back_ten_sec_back_details"/>
+
+
+                        <ImageView
+                            android:id="@+id/iv_nextaudio"
+                            android:layout_toEndOf="@+id/mPlayerControl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:src="@drawable/btn_next_ten_sec_book_details"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_desc"
+                        android:text=""
+                        android:fontFamily="@font/app_font_poppins_regular"
+                        android:layout_below="@+id/rl_play"
+                        android:textColor="@color/devy_grey"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_10sdp"/>
+                    <LinearLayout
+                        android:id="@+id/ll_motivation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_desc"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/similarAudioBook"
+                                android:fontFamily="@font/app_font_poppins_semibold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_16sdp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/SeeAll"
+                                android:id="@+id/tv_similarAudioBook_viewmore"
+                                android:textColor="@color/app_theme"
+                                android:layout_alignParentEnd="true"
+                                android:textSize="@dimen/_12sdp"
+                                android:paddingEnd="@dimen/_10sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_2sdp"
+                                android:paddingBottom="@dimen/_2sdp"
+                                android:visibility="gone"/>
+
+                        </RelativeLayout>
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:id="@+id/ll_simillar"
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+
+
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/pbloader"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/app_theme"
+            android:visibility="gone"/>
+
+
+
+    </RelativeLayout>
+</layout>

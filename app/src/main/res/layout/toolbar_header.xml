@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_theme"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:id="@+id/iv_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_back_audio_book_details"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_8sdp"
+            android:textSize="@dimen/_12ssp"
+            android:singleLine="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_toRightOf="@+id/iv_Back"
+            android:textColor="@color/white"
+            android:fontFamily="@font/app_font_poppins_bold"
+            />
+
+
+    </RelativeLayout>
+</layout>
